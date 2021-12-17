@@ -1,11 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    name='',
-    version='1.0',
-    description='Copied from StackOverFlow',
-    author='Grigoriy Simonov',
-    author_email='gri_simonov@mail.ru',
-    packages=['code'], 
-    install_requires=['unittest', 'math']
+    setup_requires=['setuptools_scm'],
+    use_scm_version=True,
+    packages=find_packages(),
+    include_package_data=True,
 )
